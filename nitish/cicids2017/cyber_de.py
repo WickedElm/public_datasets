@@ -49,7 +49,7 @@ def get_singular_values(x):
 # between the variables
 # ----------------------------------------------------------------------------------
 def get_input_files():
-    files = ['all_data.csv']
+    files = ['all_data.csv.gz']
     #files = ['pre_attack_1.csv', 'pre_attack_2.csv', 'pre_attack_3.csv', 
     #         'attack_1.csv', 'attack_2.csv', 'attack_3.csv', 
     #         'post_attack_1.csv', 'post_attack_2.csv', 'post_attack_3.csv',
@@ -85,7 +85,7 @@ if __name__ == '__main__':
     # Check that files exist first
     for f in files:
         if not os.path.exists(f'{basedir}/{f}'):
-            print(f'{f} not found.  Please run gunzip {basedir}/{f}.gz')
+            print(f'{f} not found.')
             sys.exit()
 
     for file in files:
